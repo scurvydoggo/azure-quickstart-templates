@@ -109,13 +109,13 @@
             "name": "[variables('acrName')]",
             "type": "Microsoft.ContainerRegistry/registries",
             "location": "[parameters('location')]",
-            "apiVersion": "2017-03-01",
+            "apiVersion": "2019-12-01-preview",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts', variables('acrStorageAccountName'))]"
             ],
             "sku": {
-                "name": "Basic",
-                "tier": "Basic"
+                "name": "Premium",
+                "tier": "Premium"
             },
             "properties": {
                 "adminUserEnabled": false,
