@@ -114,15 +114,11 @@
                 "[resourceId('Microsoft.Storage/storageAccounts', variables('acrStorageAccountName'))]"
             ],
             "sku": {
-                "name": "Premium",
-                "tier": "Premium"
+                "name": "Basic",
+                "tier": "Basic"
             },
             "properties": {
-                "adminUserEnabled": false,
-                "storageAccount": {
-                    "name": "[variables('acrStorageAccountName')]",
-                    "accessKey": "[listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('acrStorageAccountName')), '2016-01-01').keys[0].value]"
-                }
+                "adminUserEnabled": false
             }
         },
         {
